@@ -1,0 +1,3 @@
+Comandos ejecutados:
+
+composer create-project laravel/laravel first_steps 4.2 --prefer-dist

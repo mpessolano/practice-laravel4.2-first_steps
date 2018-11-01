@@ -13,5 +13,18 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	$var = array('test');
+
+	$nombre = 'Marianna';
+
+	return View::make('hello', compact('var', 'nombre'));
 });
+
+Route::get('/test/{id}', function($id){
+
+	return Response::json(array('status' => 200, 'message' => $id));
+	//return json_encode(array('status' => 200, 'message' => 'OK'));
+
+});
+
+Route::get('/llamando/al/controller/{param?}', 'HomeController@mimetodo');
